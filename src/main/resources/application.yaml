@@ -1,0 +1,30 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    url: jdbc:h2:mem:s3demo
+    driver-class-name: org.h2.Driver
+    username: root
+    password: root
+  config:
+    location: /cloudtrailprocessing.properties
+
+logging:
+  level:
+    com:
+      amazonaws:
+        xray: DEBUG
+
+server:
+  port: 8080
+
+amazonProperties:
+  accessKey: AKIAIVSNXVYQW4VTVNBQ
+  secretKey: 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

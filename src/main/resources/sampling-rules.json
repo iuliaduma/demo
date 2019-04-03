@@ -1,0 +1,89 @@
+{
+  "version" : 1,
+  "rules": [
+    {
+      "description" : "Create bucket",
+      "service_name" : "*",
+      "http_method" : "POST",
+      "url_path" : "/buckets/create",
+      "fixed_target" : 1,
+      "rate" : 1.0
+    },
+    {
+      "description" : "List buckets",
+      "service_name" : "*",
+      "http_method" : "GET",
+      "url_path" : "/buckets/",
+      "fixed_target" : 1,
+      "rate" : 1.0
+    },
+    {
+      "description" : "Upload object",
+      "service_name" : "*",
+      "http_method" : "POST",
+      "url_path" : "/objects/upload",
+      "fixed_target" : 1,
+      "rate" : 1.0
+    },
+    {
+      "description" : "Download object",
+      "service_name" : "*",
+      "http_method" : "POST",
+      "url_path" : "/objects/download",
+      "fixed_target" : 1,
+      "rate" : 1.0
+    },
+    {
+      "description" : "List objects",
+      "service_name" : "*",
+      "http_method" : "GET",
+      "url_path" : "/objects/",
+      "fixed_target" : 1,
+      "rate" : 1.0
+    },
+    {
+      "description" : "List objects from a bucket",
+      "service_name" : "*",
+      "http_method" : "GET",
+      "url_path" : "/objects/*",
+      "fixed_target" : 1,
+      "rate" : 1.0
+    },
+    {
+      "description" : "Create user ",
+      "service_name" : "*",
+      "http_method" : "POST",
+      "url_path" : "/users/create",
+      "fixed_target" : 1,
+      "rate" : 1.0
+    },
+    {
+      "description" : "List alarms",
+      "service_name" : "*",
+      "http_method" : "GET",
+      "url_path" : "/cloudwatch/alarms",
+      "fixed_target" : 1,
+      "rate" : 1.0
+    },
+    {
+      "description" : "Add alarm",
+      "service_name" : "*",
+      "http_method" : "GET",
+      "url_path" : "/cloudwatch/add/*",
+      "fixed_target" : 1,
+      "rate" : 1.0
+    },
+    {
+      "description" : "Enable alarm ",
+      "service_name" : "*",
+      "http_method" : "GET",
+      "url_path" : "/cloudwatch/enable/*",
+      "fixed_target" : 1,
+      "rate" : 1.0
+    }
+  ],
+  "default" : {
+    "fixed_target" : 1,
+    "rate" : 0.1
+  }
+}
